@@ -6,55 +6,55 @@
         xmlns:local="clr-namespace:qrcode"
         mc:Ignorable="d"
         Icon="icon.ico"
-        Title="秒行智能二维码工具" Height="580" Width="700">
+        ResizeMode="NoResize"
+        Title="秒行智能二维码工具" Height="580" Width="610">
     <Grid>
-        <GroupBox Header="参数设置" Height="212" HorizontalAlignment="Left" Margin="17,23,0,0" Name="groupBox4" VerticalAlignment="Top" Width="395">
-            <Canvas Margin="0,10,7,20">
-                <TextBlock Height="23" HorizontalAlignment="Left" x:Name="textBlockYear" Text="生成年份:" VerticalAlignment="Top" Width="55" Canvas.Left="10" Canvas.Top="11" />
-                <TextBox Height="23" HorizontalAlignment="Left" x:Name="txtYear" VerticalAlignment="Top" Width="42" ToolTip="两位数字" RenderTransformOrigin="0.525,-1.671" Canvas.Left="70" Canvas.Top="10" />
+        <GroupBox Header="参数设置" Height="180" HorizontalAlignment="Left" Margin="10,10,0,0" Name="groupBox4" VerticalAlignment="Top" Width="580">
+            <Canvas Margin="0,0,0,0">
+                <TextBlock Height="23" HorizontalAlignment="Left" x:Name="textBlockYear" Text="生成年份:" VerticalAlignment="Top" Width="55" Canvas.Left="10" Canvas.Top="10" />
+                <TextBox Height="23" HorizontalAlignment="Left" x:Name="txtYear" VerticalAlignment="Top" Width="40" ToolTip="两位数字" RenderTransformOrigin="0.525,-1.671" Canvas.Left="70" Canvas.Top="10" />
                 <TextBlock Height="23" HorizontalAlignment="Left" x:Name="textBlockWeek" Text="制造周数:" VerticalAlignment="Top" Width="55" Canvas.Left="10" Canvas.Top="50" />
-                <TextBox Height="23" HorizontalAlignment="Left" x:Name="txtWeek" VerticalAlignment="Top" Width="42" ToolTip="两位数字" RenderTransformOrigin="2.188,0.62" Canvas.Left="70" Canvas.Top="49" />
-                <TextBlock Height="23" HorizontalAlignment="Left" x:Name="textBlockTez" Text="特征码:" VerticalAlignment="Top" Width="47" Canvas.Left="10" Canvas.Top="127" />
-                <TextBox Height="23" HorizontalAlignment="Left" x:Name="txtTezheng" VerticalAlignment="Top" Width="44" Text="CS0" ToolTip="两位数字" Canvas.Left="68" Canvas.Top="126" />
+                <TextBox Height="23" HorizontalAlignment="Left" x:Name="txtWeek" VerticalAlignment="Top" Width="40" ToolTip="两位数字" RenderTransformOrigin="2.188,0.62" Canvas.Left="70" Canvas.Top="49" />
+                <TextBlock Height="23" HorizontalAlignment="Left" x:Name="textBlockTez" Text="特征码:" VerticalAlignment="Top" Width="55" Canvas.Left="10" Canvas.Top="127" />
+                <TextBox Height="23" HorizontalAlignment="Left" x:Name="txtTezheng" VerticalAlignment="Top" Width="42" Text="CS0" ToolTip="两位数字" Canvas.Left="68" Canvas.Top="126" />
                 <TextBlock Height="23" HorizontalAlignment="Left" x:Name="textBlockTez_Copy" Text="生产批号:" VerticalAlignment="Top" Width="55" Canvas.Left="10" Canvas.Top="84" />
-                <TextBox Height="23" HorizontalAlignment="Left" x:Name="txtIssue" VerticalAlignment="Top" Width="42" Text="00" ToolTip="两位数字" Canvas.Left="70" Canvas.Top="83" />
+                <TextBox Height="23" HorizontalAlignment="Left" x:Name="txtIssue" VerticalAlignment="Top" Width="40" Text="00" ToolTip="两位数字" Canvas.Left="70" Canvas.Top="83" />
+                <GroupBox Header="序列号" Height="140" HorizontalAlignment="Left" Margin="150,10,0,0" Name="groupBox2" VerticalAlignment="Top" Width="174">
+                    <Canvas Margin="0,0,0,0">
+                        <TextBlock Height="23" HorizontalAlignment="Left" Name="textBlock2" Text="开始编号:" VerticalAlignment="Top" Width="73" Canvas.Left="10" Canvas.Top="10" />
+                        <TextBox Height="23" HorizontalAlignment="Left" x:Name="txtBegin" VerticalAlignment="Top" Width="43" Text="000" ToolTip="两位数字" RenderTransformOrigin="-1.446,0.399" Canvas.Left="88" Canvas.Top="9" />
+                        <TextBlock Height="23" HorizontalAlignment="Left" x:Name="textBlock2_Copy" Text="结束编号:" VerticalAlignment="Top" Width="73" Canvas.Left="10" Canvas.Top="38" RenderTransformOrigin="0.516,1.574" />
+                        <TextBox Height="23" HorizontalAlignment="Left" x:Name="txtEnd" VerticalAlignment="Top" Width="43" Text="999" ToolTip="两位数字" RenderTransformOrigin="-1.446,0.399" Canvas.Left="88" Canvas.Top="38" />
+                    </Canvas>
+                </GroupBox>
+                <GroupBox Header="二维码" Height="140" HorizontalAlignment="Left" Margin="350,10,0,0" x:Name="groupBox2_Copy" VerticalAlignment="Top" Width="200">
+                    <Canvas Margin="0,0,0,0">
+                        <TextBlock Height="23" HorizontalAlignment="Left" Name="textBlock3" Text="Logo图片:" VerticalAlignment="Top" Width="68" Canvas.Left="12" Canvas.Top="10" RenderTransformOrigin="0.529,-0.522" />
+                        <Button Content="添加..." Height="23" HorizontalAlignment="Left" Name="btnAddLogo" VerticalAlignment="Top" Width="75" Click="btnAddLogoClick" Canvas.Left="95" Canvas.Top="10" RenderTransformOrigin="0.907,0.522" />
+                        <TextBlock Height="23" HorizontalAlignment="Left" Name="textBlock4" Text="Logo比例:" VerticalAlignment="Top" Width="60" Canvas.Left="12" Canvas.Top="43"/>
+                        <TextBox Height="23" HorizontalAlignment="Left" Name="txtLogoSize" VerticalAlignment="Top" Width="75" Text="15" Canvas.Left="95" Canvas.Top="43"/>
+
+                        <TextBlock Height="23" HorizontalAlignment="Left" x:Name="textBlock1_Copy1" Text="服务器:" VerticalAlignment="Top" Width="68" Canvas.Left="12" Canvas.Top="79" />
+                        <ComboBox Height="23" HorizontalAlignment="Left" x:Name="server" VerticalAlignment="Top" Width="74" Canvas.Left="95" Canvas.Top="79" RenderTransformOrigin="0.459,-0.522" >
+                            <ComboBoxItem Content="正式服" IsSelected="True"/>
+                            <ComboBoxItem Content="测试服"/>
+                        </ComboBox>
+                    </Canvas>
+                </GroupBox>
             </Canvas>
         </GroupBox>
 
-        <GroupBox Header="序列号" Height="123" HorizontalAlignment="Left" Margin="200,58,0,0" Name="groupBox2" VerticalAlignment="Top" Width="174">
-            <Canvas Margin="0,0,-2,8">
-                <TextBlock Height="23" HorizontalAlignment="Left" Name="textBlock2" Text="开始编号:" VerticalAlignment="Top" Width="73" Canvas.Left="10" Canvas.Top="10" />
-                <TextBox Height="23" HorizontalAlignment="Left" x:Name="txtBegin" VerticalAlignment="Top" Width="43" Text="000" ToolTip="两位数字" RenderTransformOrigin="-1.446,0.399" Canvas.Left="88" Canvas.Top="9" />
-                <TextBlock Height="23" HorizontalAlignment="Left" x:Name="textBlock2_Copy" Text="结束编号:" VerticalAlignment="Top" Width="73" Canvas.Left="10" Canvas.Top="38" RenderTransformOrigin="0.516,1.574" />
-                <TextBox Height="23" HorizontalAlignment="Left" x:Name="txtEnd" VerticalAlignment="Top" Width="43" Text="999" ToolTip="两位数字" RenderTransformOrigin="-1.446,0.399" Canvas.Left="88" Canvas.Top="38" />
-            </Canvas>
-        </GroupBox>
+        <Button Content="预览" Height="23" HorizontalAlignment="Left" Name="btnCreateQRCode" Margin="200,200,0,0" VerticalAlignment="Top" Width="75" Click="btnCreateQRCodeClick" Canvas.Left="110" Canvas.Top="140" />
+        <Button Content="生成并保存" Height="23" HorizontalAlignment="Left" Name="btnSave" Margin="280,200,0,0" VerticalAlignment="Top" Width="75" Click="btnSaveClick" Canvas.Left="313" Canvas.Top="140" />
+        
 
-        <Border BorderBrush="Silver" BorderThickness="1" Height="280" HorizontalAlignment="Left" Margin="17,250,0,0" Name="border2" VerticalAlignment="Top" Width="280" >
-            <Image Height="265" Stretch="None" HorizontalAlignment="Left" x:Name="imgQRcode" VerticalAlignment="Top" Width="265" Margin="6,7,0,0" />
-        </Border>
-
-        <GroupBox Header="二维码" Height="212" HorizontalAlignment="Left" Margin="440,23,0,0" x:Name="groupBox2_Copy" VerticalAlignment="Top" Width="227">
-            <Canvas Margin="0,0,-12,0">
-                <TextBlock Height="23" HorizontalAlignment="Left" x:Name="textBlock1_Copy" Text="二维码尺寸:" VerticalAlignment="Top" Width="68" Canvas.Left="10" Canvas.Top="21" />
-                <TextBox Height="23" HorizontalAlignment="Left" Name="txtSize" VerticalAlignment="Top" Width="74" Text="12" ToolTip="两位数字" Canvas.Left="95" Canvas.Top="20" />
-                <Button Content="生成" Height="23" HorizontalAlignment="Left" Name="btnCreateQRCode" VerticalAlignment="Top" Width="75" Click="btnCreateQRCodeClick" Canvas.Left="10" Canvas.Top="140" />
-                <Button Content="保存" Height="23" HorizontalAlignment="Left" Name="btnSave" VerticalAlignment="Top" Width="75" Click="btnSaveClick" Canvas.Left="113" Canvas.Top="140" />
-                <TextBlock Height="23" HorizontalAlignment="Left" x:Name="textBlock1_Copy1" Text="服务器:" VerticalAlignment="Top" Width="68" Canvas.Left="10" Canvas.Top="97" />
-                <ComboBox Height="23" HorizontalAlignment="Left" x:Name="server" VerticalAlignment="Top" Width="74" Canvas.Left="95" Canvas.Top="97" >
-                    <ComboBoxItem Content="正式服" IsSelected="True"/>
-                    <ComboBoxItem Content="测试服"/>
-                </ComboBox>
-            </Canvas>
-        </GroupBox>
-        <GroupBox Header="自定义Logo" Height="280" HorizontalAlignment="Left" Margin="397,250,0,0" Name="groupBox3" VerticalAlignment="Top" Width="270">
-            <Canvas Margin="36,38,110,231">
-                <TextBlock Height="23" HorizontalAlignment="Left" Name="textBlock3" Text="Logo图片:" VerticalAlignment="Top" Width="68" Canvas.Left="-28" Canvas.Top="-33" />
-                <Button Content="添加..." Height="23" HorizontalAlignment="Left" Name="btnAddLogo" VerticalAlignment="Top" Width="75" Click="btnAddLogoClick" Canvas.Left="67" Canvas.Top="-33" />
-                <TextBlock Height="23" HorizontalAlignment="Left" Name="textBlock4" Text="Logo比例:" VerticalAlignment="Top" Width="60" Canvas.Left="-28" />
-                <TextBox Height="23" HorizontalAlignment="Left" Name="txtLogoSize" VerticalAlignment="Top" Width="75" Text="15" Canvas.Left="67" />
-                <Border BorderBrush="Silver" BorderThickness="1" Height="177" HorizontalAlignment="Left" Name="border1" VerticalAlignment="Top" Width="188" Canvas.Left="-7" Canvas.Top="35" >
-                    <Image Height="157" HorizontalAlignment="Left" x:Name="imgLogo" Stretch="Fill" VerticalAlignment="Top" Width="168" Margin="9,9,0,0" />
+        <GroupBox Header="预览" Height="300" HorizontalAlignment="Left" Margin="10,230,0,0" Name="groupBox3" VerticalAlignment="Top" Width="580">
+            <Canvas Margin="0,0,0,0">
+                <Border BorderBrush="Silver" BorderThickness="1" Height="250" HorizontalAlignment="Left" Margin="10,10,0,0" Name="border2" VerticalAlignment="Top" Width="250" >
+                    <Image Height="240" Stretch="None" HorizontalAlignment="Left" x:Name="imgQRcode" VerticalAlignment="Top" Width="240" Margin="5,5,5,5" />
+                </Border>
+                <Border BorderBrush="Silver" BorderThickness="1" Height="180" HorizontalAlignment="Left" Name="border1" VerticalAlignment="Top" Width="180" Canvas.Left="300" Canvas.Top="10" >
+                    <Image Height="160" HorizontalAlignment="Left" x:Name="imgLogo" Stretch="Fill" VerticalAlignment="Top" Width="160" Margin="10,10,10,10" />
                 </Border>
             </Canvas>
         </GroupBox>
