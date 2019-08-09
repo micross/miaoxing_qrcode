@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Icon="icon.ico"
         ResizeMode="NoResize"
-        Title="秒行智能二维码工具" Height="580" Width="610">
+        Title="秒行智能二维码工具(童烨专用)" Height="580" Width="610" WindowStartupLocation="CenterScreen">
     <Grid>
         <GroupBox Header="参数设置" Height="180" HorizontalAlignment="Left" Margin="10,10,0,0" Name="groupBox4" VerticalAlignment="Top" Width="580">
             <Canvas Margin="0,0,0,0">
-                <TextBlock Height="23" HorizontalAlignment="Left" x:Name="textBlockYear" Text="生成年份:" VerticalAlignment="Top" Width="55" Canvas.Left="10" Canvas.Top="10" />
+                <TextBlock Height="23" HorizontalAlignment="Left" x:Name="textBlockYear" Text="生产年份:" VerticalAlignment="Top" Width="55" Canvas.Left="10" Canvas.Top="10" />
                 <TextBox Height="23" HorizontalAlignment="Left" x:Name="txtYear" VerticalAlignment="Top" Width="40" ToolTip="两位数字" RenderTransformOrigin="0.525,-1.671" Canvas.Left="70" Canvas.Top="10" />
                 <TextBlock Height="23" HorizontalAlignment="Left" x:Name="textBlockWeek" Text="制造周数:" VerticalAlignment="Top" Width="55" Canvas.Left="10" Canvas.Top="50" />
                 <TextBox Height="23" HorizontalAlignment="Left" x:Name="txtWeek" VerticalAlignment="Top" Width="40" ToolTip="两位数字" RenderTransformOrigin="2.188,0.62" Canvas.Left="70" Canvas.Top="49" />

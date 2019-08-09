@@ -51,7 +51,7 @@ namespace qrcode
             try
             {
                 QRCodeGenerator qrGenerator = new QRCodeGenerator();
-                QRCodeData qrCodeData = qrGenerator.CreateQrCode(url + content, QRCodeGenerator.ECCLevel.H);
+                QRCodeData qrCodeData = qrGenerator.CreateQrCode(url + content, QRCodeGenerator.ECCLevel.H,true);
                 QRCode qrCode = new QRCode(qrCodeData);
                 Bitmap bitmapLogo = null;
                 if (!logoImagepath.Equals(string.Empty))
@@ -212,6 +212,14 @@ namespace qrcode
 
         private void btnSaveClick(object sender, RoutedEventArgs e)
         {
+            int begin = Convert.ToInt32(txtBegin.Text);
+            int end = Convert.ToInt32(txtEnd.Text);
+            if (begin > end)
+            {
+                MessageBox.Show("开始编号不能大于结束编号！", "系统提示");
+                return;
+            }
+
             System.Windows.Forms.FolderBrowserDialog path = new System.Windows.Forms.FolderBrowserDialog();
             path.RootFolder = Environment.SpecialFolder.Desktop;
 
